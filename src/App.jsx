@@ -14,7 +14,7 @@ import {
 } from "./sections";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ListaInvitados from "./components/ListaInvitados";
 
 const App = () => {
@@ -23,53 +23,51 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div>
-        <main>
-          <Hero />
-          <section>
-            <Message />
-          </section>
-          <Routes>
-            {/* <Route path="/inv_prueba" element={<ListaInvitados />} /> */}
-            <Route
-              path="/INVITACION-VALENTINA/invitado/:id"
-              element={<Invitado />}
-            />
-            <Route
-              path="/INVITACION-VALENTINA/lista-invitados"
-              element={<ListaInvitados />}
-            />
-          </Routes>
-          {/* <Invitado /> */}
-          <section>
-            <Ubicaciones />
-          </section>
-          {/* <ListaInvitados /> */}
-          <section className="flex justify-center py-8 px-8">
-            <Contador />
-          </section>
-          <section>
-            <Familia />
-          </section>
-          <section className="padding">
-            <MiHistoria />
-          </section>
-          <section>
-            <Programa />
-          </section>
-          <section className="padding-x sm:pt-24 pt-12">
-            <Galeria />
-          </section>
-          <section className="padding">
-            <Confirmacion />
-          </section>
-          <section className="flex justify-center">
-            <Agradecimiento />
-          </section>
-        </main>
-      </div>
-    </BrowserRouter>
+    <div>
+      <main>
+        <Hero />
+        <section>
+          <Message />
+        </section>
+        <Routes>
+          {/* <Route path="/inv_prueba" element={<ListaInvitados />} /> */}
+          <Route
+            path="https://angieprog.github.io/INVITACION-VALENTINA/invitado/:id"
+            element={<Invitado />}
+          />
+          <Route
+            path="https://angieprog.github.io/INVITACION-VALENTINA/lista-invitados"
+            element={<ListaInvitados />}
+          />
+        </Routes>
+        {/* <Invitado /> */}
+        <section>
+          <Ubicaciones />
+        </section>
+        {/* <ListaInvitados /> */}
+        <section className="flex justify-center py-8 px-8">
+          <Contador />
+        </section>
+        <section>
+          <Familia />
+        </section>
+        <section className="padding">
+          <MiHistoria />
+        </section>
+        <section>
+          <Programa />
+        </section>
+        <section className="padding-x sm:pt-24 pt-12">
+          <Galeria />
+        </section>
+        <section className="padding">
+          <Confirmacion />
+        </section>
+        <section className="flex justify-center">
+          <Agradecimiento />
+        </section>
+      </main>
+    </div>
   );
 };
 
