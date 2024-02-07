@@ -32,9 +32,12 @@ const App = () => {
           </section>
           <Routes>
             {/* <Route path="/inv_prueba" element={<ListaInvitados />} /> */}
-            <Route path="/inv_prueba/invitado/:id" element={<Invitado />} />
             <Route
-              path="/inv_prueba/lista-invitados"
+              path="/INVITACION-VALENTINA/invitado/:id"
+              element={<Invitado />}
+            />
+            <Route
+              path="/INVITACION-VALENTINA/lista-invitados"
               element={<ListaInvitados />}
             />
           </Routes>
