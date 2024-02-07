@@ -14,7 +14,7 @@ import {
 } from "./sections";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ListaInvitados from "./components/ListaInvitados";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
   }, []);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div>
         <main>
           <Hero />
@@ -69,7 +69,7 @@ const App = () => {
           </section>
         </main>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
