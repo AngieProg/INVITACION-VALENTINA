@@ -10,11 +10,15 @@ import MiHistoria from "./MiHistoria";
 import Ubicaciones from "./Ubicaciones";
 import Programa from "./Programa";
 import Parallax from "./Parallax";
+import Guess from "./Guess";
+import Persona from "./Persona";
 
 export {
   Hero,
   Agradecimiento,
   Confirmacion,
+  Persona,
+  Guess,
   Contador,
   Familia,
   Galeria,

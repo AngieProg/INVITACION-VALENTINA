@@ -14,43 +14,59 @@ import {
 } from "./sections";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ListaInvitados from "./components/ListaInvitados";
 
 const App = () => {
   useEffect(() => {
     AOS.init({ duration: 3000 });
   }, []);
+
   return (
-    <main>
-      <Hero />
-      <section>
-        <Message />
-      </section>
-      <Invitado />
-      <section>
-        <Ubicaciones />
-      </section>
-      <section className="flex justify-center py-8 px-8">
-        <Contador />
-      </section>
-      <section>
-        <Familia />
-      </section>
-      <section className="padding">
-        <MiHistoria />
-      </section>
-      <section>
-        <Programa />
-      </section>
-      <section className="padding-x sm:pt-24 pt-12">
-        <Galeria />
-      </section>
-      <section className="padding">
-        <Confirmacion />
-      </section>
-      <section className="flex justify-center">
-        <Agradecimiento />
-      </section>
-    </main>
+    <BrowserRouter>
+      <div>
+        <main>
+          <Hero />
+          <section>
+            <Message />
+          </section>
+          <Routes>
+            {/* <Route path="/inv_prueba" element={<ListaInvitados />} /> */}
+            <Route path="/inv_prueba/invitado/:id" element={<Invitado />} />
+            <Route
+              path="/inv_prueba/lista-invitados"
+              element={<ListaInvitados />}
+            />
+          </Routes>
+          {/* <Invitado /> */}
+          <section>
+            <Ubicaciones />
+          </section>
+          {/* <ListaInvitados /> */}
+          <section className="flex justify-center py-8 px-8">
+            <Contador />
+          </section>
+          <section>
+            <Familia />
+          </section>
+          <section className="padding">
+            <MiHistoria />
+          </section>
+          <section>
+            <Programa />
+          </section>
+          <section className="padding-x sm:pt-24 pt-12">
+            <Galeria />
+          </section>
+          <section className="padding">
+            <Confirmacion />
+          </section>
+          <section className="flex justify-center">
+            <Agradecimiento />
+          </section>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 };
 

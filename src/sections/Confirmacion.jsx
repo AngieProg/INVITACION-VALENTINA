@@ -1,6 +1,7 @@
 import { confirmaciones } from "../constants/index";
-import CardInfo from "../components/CardInfo";
+// import CardInfo from "../components/CardInfo";
 import { separador } from "../assets/icons";
+import { Link } from "react-router-dom";
 
 const Confirmacion = () => (
   <section className="flex justify-center">
@@ -23,15 +24,61 @@ const Confirmacion = () => (
       <div className="flex flex-wrap gap-5 justify-center md:px-10 md:gap-9">
         {confirmaciones.map((confirmacion, index) => (
           <div key={index}>
-            <CardInfo
-              icon={confirmacion.icon}
-              titulo1={confirmacion.titulo1}
-              titulo2={confirmacion.titulo2}
-              btn1={confirmacion.btn1}
-              btn2={confirmacion.btn2}
-              url1={confirmacion.url1}
-              url2={confirmacion.url2}
-            />
+            <div className="flex flex-col border-dark-pink border-4 justify-center items-center px-8 py-8 mb-5 w-[300px] shadow-3xl">
+              <img
+                src={confirmacion.icon}
+                alt={confirmacion.titulo1}
+                className="w-[50px] h-[50px]"
+                data-aos="zoom-out-up"
+              />
+
+              <h3 className="font-sofia text-base py-2">
+                {confirmacion.titulo1}
+              </h3>
+
+              <h2 className="font-mea text-2xl py-3">{confirmacion.titulo2}</h2>
+              {confirmacion.hora && (
+                <div className="flex p-2 items-center ">
+                  <img
+                    src={confirmacion.icon}
+                    alt="hora"
+                    className="w-[17px] h-[17px]"
+                  />
+                  <p className="font-montserrat text-sm ml-2">
+                    {confirmacion.hora} HRS
+                  </p>
+                </div>
+              )}
+              <div data-aos="flip-up">
+                <Link
+                  target={"_blank"}
+                  to={confirmacion.url1}
+                  className="pink_gradient flex justify-around items-center border-2 border-dark-brown rounded-2xl p-1 mb-3 w-[150px]"
+                >
+                  <img
+                    src={confirmacion.icon3}
+                    alt="gps"
+                    className="w-[20px] h-[20px]"
+                  />
+                  {confirmacion.btn1}
+                </Link>
+                {/* {btn1 && <Boton label={btn1} img={confirmacion} url1={url1} />} */}
+              </div>
+              <div data-aos="flip-down">
+                <Link
+                  target={"_blank"}
+                  to={confirmacion.url2}
+                  className="pink_gradient flex justify-around items-center border-2 border-dark-brown rounded-2xl p-1 mb-3 w-[150px]"
+                >
+                  <img
+                    src={confirmacion.icon3}
+                    alt="gps"
+                    className="w-[20px] h-[20px]"
+                  />
+                  {confirmacion.btn2}
+                </Link>
+              </div>
+            </div>
           </div>
         ))}
       </div>

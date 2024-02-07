@@ -7,7 +7,7 @@ import { cancion } from "../assets/music";
 const Sobre = () => {
   useEffect(() => {
     mostrarAlerta();
-  }, []);
+  });
 
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef();

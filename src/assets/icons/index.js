@@ -22,10 +22,12 @@ import comidaPrograma from "./comidaPrograma.png";
 import iglesiaPrograma from "./iglesiaPrograma.png";
 import valsPrograma from "./valsPrograma.png";
 import recepcionPrograma from "./recepcionPrograma.png";
+import confirmar from "./confirmar.png";
 
 export {
   banner,
   corazon,
+  confirmar,
   corazones,
   confirmacion,
   email,
