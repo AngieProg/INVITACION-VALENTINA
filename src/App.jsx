@@ -29,8 +29,8 @@ const App = () => {
         <section>
           <Message />
         </section>
-        <Routes>
-          {/* <Route path="/inv_prueba" element={<ListaInvitados />} /> */}
+
+        {/* <Routes>
           <Route
             path="https://angieprog.github.io/INVITACION-VALENTINA/invitado/:id"
             element={<Invitado />}
@@ -39,7 +39,8 @@ const App = () => {
             path="https://angieprog.github.io/INVITACION-VALENTINA/lista-invitados"
             element={<ListaInvitados />}
           />
-        </Routes>
+        </Routes> */}
+
         {/* <Invitado /> */}
         <section>
           <Ubicaciones />

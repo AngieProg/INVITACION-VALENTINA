@@ -40,14 +40,14 @@ const ListaInvitados = () => {
               <td className="p-3 border-separate border border-dark-pink">
                 {invitado.ninos}
               </td>
-              <td className="p-3 border-separate border cursor-pointer hover:text-dark-pink border-dark-pink">
+              {/* <td className="p-3 border-separate border cursor-pointer hover:text-dark-pink border-dark-pink">
                 <Link
                   target={"_blank"}
                   to={`http://localhost:5173/inv_prueba/invitado/${invitado.id}`}
                 >
                   {`http://localhost:5173/inv_prueba/invitado/${invitado.id}`}
                 </Link>
-              </td>
+              </td> */}
             </tr>
           </tbody>
         ))}
