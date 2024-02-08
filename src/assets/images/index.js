@@ -4,6 +4,7 @@ import esqIzqEspacio from "./esq_left_espacio.png";
 import esqDerEspacio from "./esq_right_espacio.png";
 import esquineroIzq from "./esquinero_left_pink.png";
 import esquineroDer from "./esquinero_right_pink.png";
+import magia from "./magia.jpg";
 import galeria1 from "./galeria1.jpg";
 import galeria2 from "./galeria2.jpg";
 import galeria3 from "./galeria3.jpeg";
@@ -68,4 +69,5 @@ export {
   padrinos,
   salon,
   separadorEspacio,
+  magia,
 };

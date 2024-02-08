@@ -26,26 +26,25 @@ const App = () => {
     <BrowserRouter>
       <div>
         <main>
-          <Hero />
-          <section>
-            <Message />
-          </section>
           <Routes>
-            {/* <Route path="/inv_prueba" element={<ListaInvitados />} /> */}
-            <Route
-              path="/INVITACION-VALENTINA/invitado/:id"
-              element={<Invitado />}
-            />
             <Route
               path="/INVITACION-VALENTINA/lista-invitados"
               element={<ListaInvitados />}
             />
           </Routes>
-          {/* <Invitado /> */}
+          <Hero />
+          <section>
+            <Message />
+          </section>
+          <Routes>
+            <Route
+              path="/INVITACION-VALENTINA/invitado/:id"
+              element={<Invitado />}
+            />
+          </Routes>
           <section>
             <Ubicaciones />
           </section>
-          {/* <ListaInvitados /> */}
           <section className="flex justify-center py-8 px-8">
             <Contador />
           </section>
