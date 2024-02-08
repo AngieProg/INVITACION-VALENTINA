@@ -27,20 +27,17 @@ const App = () => {
       <div>
         <main>
           <Routes>
-            <Route
-              path="/INVITACION-VALENTINA/lista-invitados"
-              element={<ListaInvitados />}
-            />
+            <Route path="/lista-invitados" element={<ListaInvitados />} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<Hero />} />
           </Routes>
           <Hero />
           <section>
             <Message />
           </section>
           <Routes>
-            <Route
-              path="/INVITACION-VALENTINA/invitado/:id"
-              element={<Invitado />}
-            />
+            <Route path="/invitado/:id" element={<Invitado />} />
           </Routes>
           <section>
             <Ubicaciones />

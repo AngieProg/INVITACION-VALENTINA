@@ -22,7 +22,7 @@ const Invitado = () => {
             </p>
             <div
               className="flex justify-center items-center pb-2 "
-              //data-aos="flip-left"
+              data-aos="flip-left"
             >
               <img
                 src={persona}
