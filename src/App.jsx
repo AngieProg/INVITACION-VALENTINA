@@ -29,9 +29,6 @@ const App = () => {
           <Routes>
             <Route path="/lista-invitados" element={<ListaInvitados />} />
           </Routes>
-          <Routes>
-            <Route path="/" element={<Hero />} />
-          </Routes>
           <Hero />
           <section>
             <Message />
